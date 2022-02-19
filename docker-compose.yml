@@ -1,0 +1,17 @@
+version: "3.8"
+
+services:
+
+  infinispan:
+    image: infinispan/server:13.0
+    container_name: infinispan    
+    ports:
+      - "11222:11222"    
+    environment:
+      USER: admin
+      PASS: pass
+    depends_on:
+      - prometheus
+    
+    
+  
